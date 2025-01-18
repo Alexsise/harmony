@@ -1,0 +1,14 @@
+.navigation {
+    position: fixed;
+    top: 72px;
+    height: 100%;
+    width: 90px;
+    background-color: #241E3E;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+
+    padding-top: 10px;
+}

@@ -1,0 +1,35 @@
+.nav_button {
+    text-align: center;
+    text-overflow: ellipsis;
+    width: 56px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav_button>p {
+    margin-top: 2px;
+    font-size: 14px;
+}
+
+.icon_frame {
+    height: 56px;
+    width: 56px;
+    background-color: #332D49;
+    border-radius: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon_frame:hover {
+    background-color: #494068;
+    cursor: pointer;
+}
+
+.icon_frame>svg {
+    height: 90%;
+    width: 90%;
+}

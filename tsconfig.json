@@ -1,0 +1,33 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ],
+  "compilerOptions": {
+    "module": "NodeNext",
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "nodenext",
+    "esModuleInterop": true,
+    "baseUrl": "./",
+    "paths": {
+      "@icons/*": [
+        "src/assets/icons/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ]
+  // "ts-node": {
+  //     // these options are overrides used only by ts-node
+  //     // same as the --compilerOptions flag and the TS_NODE_COMPILER_OPTIONS environment variable
+  //     "compilerOptions": {
+  //       "module": "commonjs"
+  //     }
+  //   },
+}
