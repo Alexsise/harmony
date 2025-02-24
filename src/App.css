@@ -30,6 +30,8 @@ body {
 
     overflow-y: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(770px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
     gap: 10px;
+    height: fit-content;
+    padding-bottom: 100px;
 }

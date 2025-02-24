@@ -8,11 +8,6 @@
     align-items: center;
 }
 
-.nav_button>p {
-    margin-top: 2px;
-    font-size: 14px;
-}
-
 .icon_frame {
     height: 56px;
     width: 56px;
@@ -29,7 +24,26 @@
     cursor: pointer;
 }
 
-.icon_frame>svg {
+.icon_frame svg {
     height: 90%;
     width: 90%;
+}
+
+.btn_label {
+    margin-top: 2px;
+    margin-bottom: 14px;
+    font-size: 16px;
+
+    text-decoration: none;
+    color: white;
+}
+
+.btn_label:active {
+    text-decoration: none;
+    color: white;
+}
+
+.btn_label:focus {
+    text-decoration: none;
+    color: white !important;
 }

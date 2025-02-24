@@ -1,9 +1,6 @@
 .item_frame {
     position: relative;
-    max-height: 277px;
-    max-width: 770px;
-
-    width: 770px;
+    width: 700px;
     height: 277px;
 
     margin: 10px;
@@ -20,13 +17,13 @@
     border-radius: 16px;
 }
 
-.item_image_frame {
+.image_frame {
     height: 192px;
     width: 192px;
 
     position: absolute;
     left: 34px;
-    z-index: 14;
+    z-index: 1;
 
     display: flex;
     align-items: end;
@@ -47,6 +44,7 @@
     right: 32px;
     top: 12px;
     margin: 0;
+    z-index: 2;
 }
 
 .item_card>hr {
@@ -70,11 +68,12 @@
     position: absolute;
     top: 100%;
     left: 21px;
-    width: 450px;
+    width: fit-content;
+    max-width: 450px;
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 10px;
     border-radius: 8px;
-    z-index: 15;
+    z-index: 2;
     white-space: normal;
 }

@@ -1,25 +1,8 @@
 import Header from "./components/Header/Header";
 import NavBar from "./components/NavBar/NavBar";
+import { Routes, Route } from "react-router";
 import "./App.css";
-import ItemFrame from "./components/ItemFrame/ItemFrame";
-
-const itemIds = [
-  "ulfruns_endurance",
-  "nautilus_blueprint",
-  "wisp_prime_blueprint",
-  "molt_augmented",
-  "vaykor_hek",
-  "telos_akbolto",
-  "hystrix_prime_set",
-  "boar_prime_set",
-  "prisma_ohma",
-  "prisma_skana",
-  "aksomati_prime_set",
-  "legendary_fusion_core",
-  "ash_prime_set",
-  "melee_crescendo",
-  "wyrm_prime_set",
-];
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
@@ -27,10 +10,13 @@ function App() {
       <div className="app">
         <Header />
         <NavBar />
+
         <div className="content">
-          {itemIds.map((itemId) => (
-            <ItemFrame key={itemId} item_id={itemId} />
-          ))}
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="live_trade" element={<p>Live Trade!</p>} />
+            <Route path="settings" element={<p>Settings!</p>} />
+          </Routes>
         </div>
       </div>
     </>
