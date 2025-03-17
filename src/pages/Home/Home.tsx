@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
 import ItemCard from "../../components/ItemCard/ItemCard";
+import { ItemOrder, ModOrder } from "../../types";
+import { useEffect, useState } from "react";
 
 function Home() {
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [orderData, setOrderData] = useState<any>(undefined);
+  const [orderData, setOrderData] = useState<Array<ModOrder | ItemOrder>>([]);
 
   const fetchProfileOrders = async (name: string) => {
     try {
@@ -34,7 +35,7 @@ function Home() {
 
   return (
     <>
-      {orderData.map((order: any) => (
+      {orderData.map((order: ModOrder | ItemOrder) => (
         <ItemCard order={order} key={order.id} />
       ))}
     </>

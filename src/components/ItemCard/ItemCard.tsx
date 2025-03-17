@@ -1,9 +1,10 @@
 import React, { useCallback, useEffect, useState } from "react";
+import { ItemOrder, ModOrder } from "../../types";
 import "./ItemCard.css";
 
 const assetsUrl = "https://warframe.market/static/assets/";
 
-const ItemCard = ({ order }: { order: any }) => {
+const ItemCard = ({ order }: { order: ModOrder | ItemOrder }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = useCallback(() => setIsHovered(true), []);
@@ -15,7 +16,7 @@ const ItemCard = ({ order }: { order: any }) => {
         <img
           className="item_image"
           src={assetsUrl + order.itemInfo.icon}
-          alt={order.itemInfo.url_name}
+          alt={order.itemInfo.urlName}
         />
       </div>
 
