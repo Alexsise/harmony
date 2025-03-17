@@ -11,7 +11,7 @@ function Home() {
       const response = await fetch(
         `http://localhost:8000/orders?` +
           new URLSearchParams({
-            name: name,
+            username: name,
           })
       );
       if (!response.ok) throw new Error("Network response was not ok");
@@ -35,7 +35,7 @@ function Home() {
   return (
     <>
       {orderData.map((order: any) => (
-        <ItemCard order={order} key={order.orderId} />
+        <ItemCard order={order} key={order.id} />
       ))}
     </>
   );
