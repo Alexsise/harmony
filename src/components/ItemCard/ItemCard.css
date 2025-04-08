@@ -77,3 +77,11 @@
     z-index: 2;
     white-space: normal;
 }
+
+#mod {
+    border-left: solid 3px #ff33ff;
+}
+
+#item {
+    border-left: solid 3px #33ffff;
+}
