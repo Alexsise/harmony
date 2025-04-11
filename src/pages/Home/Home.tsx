@@ -1,3 +1,4 @@
+import "./Home.css";
 import ItemCard from "../../components/ItemCard/ItemCard";
 import { ItemOrder, ModOrder } from "../../types";
 import { useEffect, useState } from "react";
@@ -35,9 +36,11 @@ function Home() {
 
   return (
     <>
-      {orderData.map((order: ModOrder | ItemOrder) => (
-        <ItemCard order={order} key={order.id} />
-      ))}
+      <div className="itemGrid">
+        {orderData.map((order: ModOrder | ItemOrder) => (
+          <ItemCard order={order} key={order.id} />
+        ))}
+      </div>
     </>
   );
 }
