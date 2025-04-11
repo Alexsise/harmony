@@ -1,9 +1,11 @@
 .navigation {
     position: fixed;
-    top: 72px;
+    top: 64px;
+
     height: 100%;
-    width: 90px;
-    background-color: #241E3E;
+
+    width: 75px;
+    background-color: var(--header-navbar);
 
     display: flex;
     flex-direction: column;
