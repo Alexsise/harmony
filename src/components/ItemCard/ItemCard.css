@@ -77,9 +77,9 @@
 }
 
 #mod {
-    border-left: solid 3px #ff33ff;
+    border-right: solid 3px #ff33ff;
 }
 
 #item {
-    border-left: solid 3px #33ffff;
+    border-right: solid 3px #33ffff;
 }
