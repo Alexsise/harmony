@@ -6,11 +6,11 @@ import LiveTrade from "@icons/live_trade.svg?react";
 
 const NavBar = () => {
   return (
-    <div className="navigation">
+    <nav className="navigation">
       <NavButton name="Home" route="/" icon={<Home />} />
       <NavButton name="Live Trade" route="/live_trade" icon={<LiveTrade />} />
       <NavButton name="Settings" route="/settings" icon={<Settings />} />
-    </div>
+    </nav>
   );
 };
 
