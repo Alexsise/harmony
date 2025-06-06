@@ -2,8 +2,12 @@
     position: relative;
     width: 700px;
     height: 277px;
+}
 
-    margin: 10px;
+@media only screen and (max-width: 1920px) {
+    .item_frame {
+        width: 500px;
+    }
 }
 
 .item_card {
@@ -15,6 +19,8 @@
 
     background-color: #241E3E;
     border-radius: 16px;
+
+    box-sizing: border-box;
 }
 
 .image_frame {
@@ -67,12 +73,18 @@
     position: absolute;
     top: 100%;
     left: 21px;
+
     width: fit-content;
     max-width: 450px;
+
+    z-index: 2;
+
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
+
     padding: 10px;
     border-radius: 8px;
+
     white-space: normal;
 }
 
