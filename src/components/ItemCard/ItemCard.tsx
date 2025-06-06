@@ -5,7 +5,6 @@ import "./ItemCard.css";
 const assetsUrl = "https://warframe.market/static/assets/";
 
 const ItemCard = ({ order }: { order: ModOrder | ItemOrder }) => {
-  console.log(order.isMod);
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = useCallback(() => setIsHovered(true), []);
