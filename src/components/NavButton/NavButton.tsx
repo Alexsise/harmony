@@ -1,26 +1,22 @@
-import { ReactNode } from "react";
-import "./NavButton.css";
 import { NavLink } from "react-router";
+import type { ReactNode } from "react";
 
-const NavButton = ({
-  name,
-  route,
-  icon,
-}: {
-  name: string;
-  route: string;
-  icon: ReactNode;
-}) => {
-  route;
-  name;
+import styles from "./NavButton.module.css";
+
+type NavButtonProps = {
+  urlPath: string
+  Icon: ReactNode, // Temporary solution
+  label: string,
+}
+
+export function NavButton({urlPath, Icon, label}: NavButtonProps): JSX.Element  {
   return (
-    <div className="nav_button">
-      <NavLink to={route}>
-        <div className="icon_frame">{icon}</div>
-        <p className="btn_label">{name}</p>
+      <NavLink
+      to={urlPath}
+      end
+      className={styles.button}>
+        <div className={styles.frame}>{Icon}</div>
+        <p className={styles.label}>{label}</p>
       </NavLink>
-    </div>
   );
 };
-
-export default NavButton;

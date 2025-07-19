@@ -1,4 +1,4 @@
-.nav_button {
+.button {
     text-align: center;
     text-overflow: ellipsis;
     width: 56px;
@@ -8,7 +8,7 @@
     align-items: center;
 }
 
-.icon_frame {
+.frame {
     height: 56px;
     width: 56px;
     background-color: #332D49;
@@ -19,17 +19,17 @@
     align-items: center;
 }
 
-.icon_frame:hover {
+.frame:hover {
     background-color: #494068;
     cursor: pointer;
 }
 
-.icon_frame svg {
+.frame > svg {
     height: 90%;
     width: 90%;
 }
 
-.btn_label {
+.label {
     margin-top: 2px;
     margin-bottom: 14px;
     font-size: 16px;
@@ -38,12 +38,12 @@
     color: white;
 }
 
-.btn_label:active {
+.label:active {
     text-decoration: none;
     color: white;
 }
 
-.btn_label:focus {
+.label:focus {
     text-decoration: none;
     color: white !important;
 }
