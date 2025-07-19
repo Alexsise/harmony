@@ -1,5 +1,5 @@
 import Header from "./widgets/Header/Header";
-import NavBar from "./widgets/NavBar/NavBar";
+import { NavBar } from "./widgets/NavBar/NavBar";
 import { Outlet } from "react-router";
 import "./App.css";
 
