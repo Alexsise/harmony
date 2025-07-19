@@ -25,6 +25,7 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
+    "baseUrl": ".",
     "paths": {
       "@/*": [
         "./src/*"
@@ -37,6 +38,6 @@
   "include": [
     "src",
     "public",
-    "src/shared/types/vite-environment.d.ts"
+    "src/vite-env.d.ts"
   ]
 }
