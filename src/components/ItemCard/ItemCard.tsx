@@ -1,32 +1,35 @@
 import React, { useCallback, useState } from "react";
-import { ItemOrder, ModOrder } from "../../types";
-import "./ItemCard.css";
+
+import styles from "./ItemCard.module.css";
+
+import type { ItemOrder, ModOrder } from "@/types";
 
 const assetsUrl = "https://warframe.market/static/assets/";
 
-const ItemCard = ({ order }: { order: ModOrder | ItemOrder }) => {
+function ItemCard ({ order }: { order: ModOrder | ItemOrder }) {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = useCallback(() => setIsHovered(true), []);
   const handleMouseLeave = useCallback(() => setIsHovered(false), []);
+  const itemType = order.isMod ? styles.mod : styles.item
 
   return (
-    <div className="item_frame">
-      <div className="image_frame">
+    <div className={styles.item_frame}>
+      <div className={styles.image_frame}>
         <img
-          className="item_image"
+          className={styles.item_image}
           src={assetsUrl + order.itemInfo.icon}
           alt={order.itemInfo.urlName}
         />
       </div>
 
-      <div className="item_card" id={order.isMod ? "mod" : "item"}>
+      <div className={styles.item_card + ` ${itemType}`}>
         <h3>{order.itemInfo.name}</h3>
         <hr />
         <p onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           {order.itemInfo.description}
         </p>
-        {isHovered && <div className="popup">{order.itemInfo.description}</div>}
+        {isHovered && <div className={styles.popup}>{order.itemInfo.description}</div>}
       </div>
     </div>
   );

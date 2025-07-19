@@ -88,10 +88,10 @@
     white-space: normal;
 }
 
-#mod {
+.mod {
     border-right: solid 3px #ff33ff;
 }
 
-#item {
+.item {
     border-right: solid 3px #33ffff;
 }
